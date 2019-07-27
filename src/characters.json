@@ -1,0 +1,60 @@
+[{
+    "id": 1,
+    "name": "Buffy",
+    "image":"./images/Buffy.png"
+},
+{
+    "id": 2,
+    "name": "Willow",
+    "image":"./images/Willow.png"
+},
+{
+    "id": 3,
+    "name": "Giles",
+    "image":"./images/Giles.png"
+},
+{
+    "id": 4,
+    "name": "Xander",
+    "image":"./images/Xander.png"
+},
+{
+    "id": 5,
+    "name": "Spike",
+    "image":"./images/Spike.png"
+},
+{
+    "id": 6,
+    "name": "Angel",
+    "image":"./images/Angel.png"
+},
+{
+    "id": 7,
+    "name": "Tara",
+    "image":"./images/Tara.png"
+},
+{
+    "id": 8,
+    "name": "Cordelia",
+    "image":"./images/Cordelia.png"
+},
+{
+    "id": 9,
+    "name": "Anya",
+    "image":"./images/Anya.png"
+},
+{
+    "id": 10,
+    "name": "Oz",
+    "image":"./images/Oz.png"
+},
+{
+    "id": 11,
+    "name": "Faith",
+    "image":"./images/Faith.png"
+},
+{
+    "id": 12,
+    "name": "Drusilla",
+    "image":"./images/Drusilla.png"
+}]
