@@ -1,27 +1,32 @@
-import React from 'react';
-import Discover from "./pages/Game";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import React from "react";
+import Card from "./components/Card";
+import Container from "./components/Container";
+import characters from "./utils/characters.js";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  state = {
+    characters
+  }
+
+  render() {
+    return (
+      <Container>
+        <h1 className="title">Buffy Game</h1>
+
+      {this.state.characters.map(character => (
+        <Card
+        id={character.id}
+        key={character.id}
+        name={character.name}
+        image={character.image}
+        />
+      ))}        
+      </Container>
+    );
+  }
 }
 
 export default App;
+

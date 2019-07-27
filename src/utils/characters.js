@@ -56,5 +56,5 @@
 {
     "id": 12,
     "name": "Drusilla",
-    "image":"./images/Drusilla.png"
+    "image":"./images/Dru.png"
 }]
