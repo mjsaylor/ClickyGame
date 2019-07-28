@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./components/Card";
 import Container from "./components/Container";
+import Header from "./components/Header";
 import { Game, characters } from "./utils/game.js";
 import Modal, { ModalType } from "./components/Modal"
 import "./App.css";
@@ -54,11 +55,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <Container>
+      <>
+      <Header>
         <h1 className="title">Buffy Game</h1>
         <div className="score">Score: {this.state.score}</div>
-
-        { this.state.showModal &&
+      </Header>
+      <Container>
+        {this.state.showModal &&
           <Modal modalType={this.state.modalType} />
         }
 
@@ -72,6 +75,7 @@ class App extends React.Component {
           />
         ))}
       </Container>
+      </>
     );
   }
 }
