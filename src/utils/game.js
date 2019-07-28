@@ -67,12 +67,15 @@ export class Game {
         this.selected = new Set()
         this.board = this.characters.map(character => character)
         this.score = 0
+        this.showModal = false
+
     }
 
     reset() {
         this.score = 0
         this.selected.clear()
         this.randomizeBoard()
+        this.showModal = false
     }
 
     randomizeBoard() {

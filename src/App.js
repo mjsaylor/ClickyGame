@@ -20,7 +20,7 @@ class App extends React.Component {
   }
 
   setGameState() {
-    this.setState({ board: this.game.board, score: this.game.score })
+    this.setState({ board: this.game.board, score: this.game.score, showModal: false })
     console.log(this.state)
   }
 
@@ -28,10 +28,11 @@ class App extends React.Component {
     this.game.reset();
     this.setGameState()
     this.setState({ showModal: true, modalType: ModalType.lost })
-
   }
 
   wonTheGame() {
+    this.game.reset();
+    this.setGameState()
     this.setState({ showModal: true, modalType: ModalType.won })
   }
 
@@ -56,25 +57,26 @@ class App extends React.Component {
   render() {
     return (
       <>
-      <Header>
-        <h1 className="title">Buffy Game</h1>
-        <div className="score">Score: {this.state.score}</div>
-      </Header>
-      <Container>
-        {this.state.showModal &&
-          <Modal modalType={this.state.modalType} />
-        }
+        <Header>
+          <h1 className="title">Buffy Game</h1>
+          <div className="score">Score: {this.state.score}</div>
+          {this.state.showModal &&
+            <Modal modalType={this.state.modalType} />
+          }
+        </Header>
+        <Container>
 
-        {this.state.board.map(character => (
-          <Card
-            imageId={character.id}
-            key={character.id}
-            name={character.name}
-            image={character.image}
-            onClick={this.selectCharacter}
-          />
-        ))}
-      </Container>
+
+          {this.state.board.map(character => (
+            <Card
+              imageId={character.id}
+              key={character.id}
+              name={character.name}
+              image={character.image}
+              onClick={this.selectCharacter}
+            />
+          ))}
+        </Container>
       </>
     );
   }
